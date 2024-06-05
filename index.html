@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="add-book">
+        <div id="app-title">Library</div>
+        <button id="add-book-button">Add Book To Library</button>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Pages</th>
+                <th>Read?</th>
+                <th>Remove</th>
+              </tr>
+        </thead>
+        <tbody id="display-books-field">
+
+        </tbody>
+    </table>
+
+    <div id="popup-container-item">
+        <div id="popup-title-item">Add Book</div>
+        <div id="popup-input-container-item">
+            <div class="item-input-div">
+                <label for="title">Title</label>
+                <input type="text" id="title" class="item-input item-input-text" required minlength="1">
+                <span class="error"></span>
+            </div>
+            <div class="item-input-div">
+                <label for="author">Author</label>
+                <input type="text" id="author" class="item-input item-input-text" required minlength="1">
+                <span class="error"></span>
+            </div>
+            <div class="item-input-div">
+                <label for="pages">Pages</label>
+                <input type="number" id="pages" class="item-input item-input-text" required min="1">
+                <span class="error"></span>
+            </div>
+            <div class="item-input-div item-input-div-check">
+                <label for="read">Read?</label>
+                <input type="checkbox" id="read" class="item-input">
+            </div>
+        </div>
+        <button id="popup-button-item">Add Book</button>
+    </div>
+    <div id="overlay"></div>
+</body>
+</html>

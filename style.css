@@ -1,0 +1,224 @@
+@font-face {
+    font-family: Inter;
+    src: url(assets/fonts/Inter.ttf);
+}
+
+* {
+    font-family: Inter, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(assets/images/bookshelf.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+.add-book {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0px 0px 20px 0px;
+    opacity: 80%;
+    font-weight: bolder;
+    height: 80px;
+    width: 100%;
+    background-color: rgb(255,255,255);
+    border-radius: 10px;
+}
+
+#app-title {
+    margin-left: 20px;
+    font-size: 2rem;
+}
+
+th:nth-of-type(1) {
+    border-top-left-radius: 10px;
+}
+
+th:nth-of-type(5) {
+    border-top-right-radius: 10px;
+}
+
+tr:last-of-type > td:last-of-type {
+    border-bottom-right-radius: 10px;
+    border-bottom: 0px;
+}
+
+tr:last-of-type > td:first-of-type {
+    border-bottom-left-radius: 10px;
+    border-bottom: 0px;
+}
+  
+table {
+    border-collapse: collapse;
+    letter-spacing: 1px;
+    font-size: 1rem;
+    width: 100%;
+    opacity: 90%;
+}
+  
+td,
+th {
+    border-bottom: 1px solid rgb(195,195,195);
+    padding: 10px 20px;
+}
+  
+th {
+    background-color: rgb(240,240,240);
+}
+  
+td {
+    text-align: center;
+}
+
+tr td {
+    background-color: rgb(255,255,255);
+}
+
+button {
+    color: white;
+    background-color: #74451e;
+    border: none;
+    border-radius: 10px;
+    min-height: 40px;
+    font-weight: bold;
+    box-shadow: 5px 5px 5px grey;
+    margin-right: 10px;
+}
+
+button:hover {
+    cursor: pointer;
+    opacity: 90%;
+}
+
+.add-book > button {
+    width: 200px;
+    margin-right: 20px;
+}
+
+td > button {
+    width: 60px;
+}
+
+.item-input-div {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.item-input-div-check {
+    flex-direction: row;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+}
+
+label {
+    font-weight: bold;
+}
+
+.item-input {
+    max-width: 450px;
+    height: 25px;
+}
+
+#popup-container-item {
+    padding: 20px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    z-index: 10;
+    background-color: white;
+    width: 400px;
+    max-width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 10px;
+    border-left: 7px solid #e6802d;
+}
+
+#popup-container-item.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+#popup-title-item {
+    font-weight: bolder;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+#popup-input-container-item {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#overlay {
+    position: fixed;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,.5);
+    pointer-events: none;
+}
+
+#overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.error {
+    width: 100%;
+    padding: 0;
+    font-size: 80%;
+    color: white;
+    background-color: #900;
+    border-radius: 0 0 5px 5px;
+}
+  
+.error.active {
+    padding: 0.3rem;
+}
+
+@media only screen and (max-width: 500px) {
+    .add-book {
+        height: 70px;
+    }
+
+    #app-title {
+        font-size: 1.6rem;
+        margin-left: 10px;
+    }
+
+    #add-book-button {
+        width: auto;
+        font-size: 0.8rem;
+        margin-right: 10px;
+    }
+
+    table {
+        font-size: 0.85rem;
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    td,
+    th {
+        padding: 10px 15px;
+    }
+
+    td > button {
+        min-height: 30px;
+        width: 30px;
+    }
+}
