@@ -31,9 +31,7 @@ I started and finished this project in August 2022.
 
 ## Links
 
-[Live Demo](https://brightneon7631.github.io/odin-library/)
-
-[My Other Projects](https://brightneon7631.github.io/odin-scrimba-projects/)
+[Live Demo](https://bn7631-odin-library.pages.dev)
 
 ## Screenshots
 
@@ -55,5 +53,5 @@ I started and finished this project in August 2022.
 ## Deployment
 
 ```bash
-  git clone
+  git clone https://github.com/BrightNeon7631/odin-library.git
 ```
